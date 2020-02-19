@@ -1,9 +1,8 @@
 \section{Introduction}
 
-Brief summary of measured performance, refer to ``LSST Observatory System Operations Readiness Report''.
+This section provides a brief summary of measured performance. Readers are referred to \cite{PSTN-004} for more details.
 
-This paper focuses on the performance of the as-built LSST system both on the compnent level and on the system level,
-and compare the modeled system performance to the measured performance of the as-built system
+This paper focuses on the performance of the as-built LSST system both on the component level and on the system level, and compare the modeled system performance to the measured performance of the as-built system
 
 \section{Understanding System Performance on the Component Level}
 
@@ -11,52 +10,58 @@ Use the as-built component information as input
 
 Integrated modeling for capturing technical details
 
-Results will be reconciled with system-level measurements
+Results are reconciled with system-level measurements
 
-\subsection{General Approach for System Verification and Performance Tracking}
+We also talk about our general approach for system verification and performance tracking
 
-The LSST project has continuously maintained its best estimates of the system performance.
+% The LSST project has continuously maintained its best estimates of the system performance.
 
-In early phases of the project, we had to rely heavily on simulations to baseline LSST performance.
+% In early phases of the project, we had to rely heavily on simulations to baseline LSST performance.
 
-As construction progresses, hardware is delivered, more and more as-built information and fidelity are
-incorporated into the the performance baseline.
-Optical figures, coating throughput, sensor noise and diffusion
+% As construction progresses, hardware is delivered, more and more as-built information and fidelity are
+% incorporated into the the performance baseline.
+% Optical figures, coating throughput, sensor noise and diffusion
 
-The running and evolution of our performance modeling frame is an integral part of our verification process.
+% The running and evolution of our performance modeling frame is an integral part of our verification process.
 
-MagicDraw, JIRA and GitHub (with Python code and Jupyter notebooks).
+% MagicDraw, JIRA and GitHub (with Python code and Jupyter notebooks).
 
-\subsection{Integrated Modeling}
+Integrated Modeling
 
-PSE maintains an updated model of the full system, with information from subsystems, simulating and analyzing end-to-end system performance (optics, structure and control).
+% PSE maintains an updated model of the full system, with information from subsystems,
+% simulating and analyzing end-to-end system performance (optics, structure and control).
+% PhoSim as the optical engine~\cite{2015ApJS..218...14P}.
 
-It provides a key tool for non-conformance analysis, trade studies, and performance tracking.
+% It provides a key tool for non-conformance analysis, trade studies, and performance tracking.
 
-As-built information are included as available, so that the models evolve toward the real LSST.
+% As-built information are included as available, so that the models evolve toward the real LSST.
 
-For system optimization: understanding system performance from the component level helps us better optimize the as-built system.
+% For system optimization: understanding system performance from the component level helps us better optimize the as-built system.
 
-\subsection{Reconciliation between Modeled and Measured Performance}
-Eventually, as we commission the integrated system, reconciliation of disagreements between measured performance
-and modeled performance is a necessary part of understanding and verifying the as-built LSST,
-and part of understanding sources of systematic that affect the LSST science.
+and the reconciliation between modeled and measured performance.
+% Eventually, as we commission the integrated system, reconciliation of disagreements between measured performance
+% and modeled performance is a necessary part of understanding and verifying the as-built LSST,
+% and part of understanding sources of systematic that affect the LSST science.
 
 \section{Key System Performance Metrics}
 
 The LSST Science Requirement Document (SRD) is Captured by
 
-Image quality (0.72” delivered FWHM)
+\begin{itemize}
+\item Image quality (0.72 arcsec delivered FWHM)
 
-Coadded depth (r = 27.5 mag, other bands sufficiently deep too)
+\item Coadded depth (r = 27.5 mag, other bands sufficiently deep too)
 
-Total survey area (18000 deg2 of sky)
+\item Total survey area (18000 deg$^2$ of sky)
 
-Number of visits (825 times, summed over 6 bands)
+\item Number of visits (825 times, summed over 6 bands)
+\end{itemize}
 
-Requirements flow-down
+Note that this is not a comprehensive list
 
-Not a comprehensive list
+We also talk about requirements flow-down here.
+
+
 
 \subsection{Integrated \'etendue}
 
@@ -68,30 +73,53 @@ Definition, as-built value
 
 \subsubsection{The Sensitivity Factor $f_S$}
 
-Definition, m5 results, m5 by amplifier
+Definition, m5 results, m5 by amplifier.
+
+Refer to \cite{2016SPIE.9910E..1AY} for Sky brightness model.
 
 \subsubsection{The Observing Efficiency Factor $f_O$}
 
-Definition. Briefly summarize OpSim \cite{2018arXiv181004815N}. Results
+Definition. Briefly summarize OpSim ~\cite{PSTN-007} and \cite{PSTN-043}
 
 \subsection{Image Quality}
 
-IQ budget tree status. IQ verification. Compared aggregated image quality to measured image quality.
+IQ budget tree. IQ verification. Compared aggregated image quality to measured image quality.
+
+Assuming fiducial atmosphere of 0.6 arcsec FWHM, delivered IQ by band.
+Also give IQ results using our current best knowledge about Cerro Pachon atmosphere.
+The former is used for performance characterization, and the latter is used in OpSim simulations.
 
 \subsection{Throughput}
 
-latest curves. Compare aggregated throughput curves to measured throughput. Refer to
-``Performance of the LSST Calibration Systems''.
+latest curves. Compare aggregated throughput curves to measured throughput. Refer to~\cite{PSTN-027}.
 
 \subsection{Other Metrics}
 
+\section{Integrated Modeling}
+
+PSE maintains an updated model of the full system, with information from subsystems,
+simulating and analyzing end-to-end system performance (optics, structure and control).
+Refer to past SPIE papers \cite{2016SPIE.9911E..18A, 2018SPIE10705E..0PX}.
+
+Show Integrated Model block diagram.
+
+PhoSim as the optical engine~\cite{2015ApJS..218...14P}.
+
+% It provides a key tool for non-conformance analysis, trade studies, and performance tracking.
+
+% As-built information are included as available, so that the models evolve toward the real LSST.
+
+% For system optimization: understanding system performance from the component level helps us better optimize the as-built system.
+
 \section{Mitigation and Optimization}
+
+Give examples/list of using the Integrated Model for non-conformance analysis and trade studies.
 
 Here are a couple of examples of using the “f-metrics” to perform survey mitigation and optimization.
 
 \section{Summary and Conclusions}
 
-Recap system image quality.
+Recap system image quality and m5 performance.
 
 Assuming fiducial atmosphere of 0.6 arcsec FWHM, delivered IQ by band.
 
